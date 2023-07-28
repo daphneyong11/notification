@@ -3,12 +3,7 @@ error_reporting(0);
 date_default_timezone_set("Asia/Kuala_Lumpur");
 	
 //MySQL connection
-//$con  = mysqli_connect("softworld.dyndns.biz:3300", "linxpetbooking", "L!nxpet2@22", "promas");
-// $con  = mysqli_connect("softworld.dyndns.biz:3300", "linxpetbooking", "L!nxpet2@22", "promasdev");
-// $con = mysqli_connect("www.linxpet.com:3300", "linxpetmobile", "Linxpet2022", "promas"); 
 $con = mysqli_connect("localhost", "root", "", "promas"); 
-//$con = mysqli_connect("localhost", "root", "", "pos"); 
-//mysqli("www.linxpet.com:3300", "softworld", "S@ftworld2022", "promas");
 	
 require 'vendor/autoload.php';
 
@@ -25,7 +20,6 @@ $title = $_POST['title'];
 $body = $_POST['body'];
 $sender = $_POST['sender'];
 $time = date('Y-m-d H:i:s');
-//$imageUrl = 'https://www.linxpet.com/linxpetMobile/include/img/pet/4.jpg';
 $token = 'c0ABQJ1VQTe0whSApymSdp:APA91bHorZP09jM-ir2xbSMaVTkDdDt7RfslGnygTlUczYvTUFY0tsnEhaPrLWIUSChcQygBk9YmSTy3U2yyRGl-Ff8PLF3u8Ou5yCQzSGFtaxjdaPNaAaJHE8i8aFMVNBwXj-LuPrnF';
 $customSoundUrl = 'http://192.168.2.110/linxpetMobile/cat.mp3';
 
