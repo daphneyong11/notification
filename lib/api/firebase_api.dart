@@ -18,6 +18,20 @@ final FlutterLocalNotificationsPlugin _localNotifications = FlutterLocalNotifica
 @pragma('vm:entry-point')
 Future<void> handleBackgroundMessage(RemoteMessage message) async {
   print(jsonEncode(message.toMap()));
+  var notification = message.notification;
+  if (notification == null) return;
+
+  // Create the notification details
+  var notificationDetails = NotificationDetails(android: androidChannel);
+
+  // Show the local notification
+  await _localNotifications.show(
+    notification.hashCode,
+    notification.title,
+    notification.body,
+    notificationDetails,
+    payload: jsonEncode(message.toMap()),
+  );
 }
 
 Future<void> handleFirebaseMessage(RemoteMessage message) async {
