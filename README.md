@@ -11,4 +11,6 @@ It is noted that when running in debug or profile mode everything is working.
 
 I had tested using real device (Samsung S21).
 
+The php file is the code I prompt notification.
+
 *Please register your own google-services.json in firebase console and add in android/app folder.
